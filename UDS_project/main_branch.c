@@ -11,11 +11,11 @@ struct message d1;
 #include"main.h"
 void RawDataToFrame(struct message d1, char Raw_Data[15])
 {
-    d1.length=(Raw_Data[1])-48*10+(Raw_Data[2])-48;
-    d1.function_id=(Raw_Data[4])-48*10+(Raw_Data[5])-48;
-    //printf("%x\n",d1.length);
-    d1.sub_function_id=(Raw_Data[7])-48*10+(Raw_Data[8])-48;
-    d1.actual_data=(Raw_Data[10])-48+(Raw_Data[11])-48*10+(Raw_Data[12])-48*100+(Raw_Data[13])-48*1000;
+    d1.length=(Raw_Data[1]-48)*10+(Raw_Data[2]-48);
+    d1.function_id=(Raw_Data[4]-48)*10+(Raw_Data[5]-48);
+    d1.sub_function_id=(Raw_Data[7]-48)*10+(Raw_Data[8]-48);
+    d1.actual_data=(Raw_Data[13]-48)+(Raw_Data[12]-48)*10+(Raw_Data[11]-48)*100+(Raw_Data[10]-48)*1000;
+    //printf("%d\n",d1.actual_data);
     SID_function_call(d1);
 }
 

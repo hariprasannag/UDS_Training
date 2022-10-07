@@ -18,6 +18,6 @@ void SID_0x37(struct message d1)
     else
     {
     	printf("Negative response\n");
-        printf("7F %x \n\n",d1.function_id);
+        printf("7F %d \n\n",d1.function_id);
     }
 }

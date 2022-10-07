@@ -13,15 +13,15 @@ void SID_0x87(struct message d1)
     {
     	printf("Positive response\n");
     	printf("Response sent to client : x02 C7 x00\n");
-    	if(d1.sub_function_id==0x1)
+    	if(d1.sub_function_id==1)
     	{
     		printf("Sub-function : Verify Baudrate Transition With Fixed Baudrate\n\n");
     	}
-    	else if(d1.sub_function_id==0x2)
+    	else if(d1.sub_function_id==2)
     	{
     		printf("Sub-function : Verify Baudrate Transition With Specific Baudrate\n\n");
     	}
-    	else if(d1.sub_function_id==0x3)
+    	else if(d1.sub_function_id==3)
     	{
     	    printf("Sub-function : Transition Baudrate\n\n");
     	}
@@ -29,7 +29,7 @@ void SID_0x87(struct message d1)
     else
     {
         printf("Negative response\n");
-        printf("7F %x \n\n",d1.function_id);
+        printf("7F %d \n\n",d1.function_id);
     }
 }
 

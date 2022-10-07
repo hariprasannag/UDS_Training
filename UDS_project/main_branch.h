@@ -12,5 +12,5 @@
 
 #endif*/ /* MAIN_BRANCH_H_ */
 
-void RawDataToFrame(struct message d1, char Raw_Data);
+void RawDataToFrame(struct message d1, char *Raw_Data);
 void SID_function_call(struct message d1);

@@ -11,7 +11,6 @@ int main()
 {
     struct message d1;
     char Raw_Data[15];
-    //int i;
     while(1)
     {
     	printf("---------------------------------------------------------\n");
@@ -20,8 +19,6 @@ int main()
         fflush(stdout);
         printf("Data_Length  Function_ID  Sub_Function  Actual_Data\n\n");
         fflush(stdout);
-        //for(i=0;i<4;i++)
-        //scanf("%x",&Raw_Data[i]);
         gets(Raw_Data);
         RawDataToFrame(d1, &Raw_Data);
     }
